@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PocketMarvel
 
-## Getting Started
+Une application NextJS utilisant l'API REST de Marvel Comics pour afficher des données sur les personnages, les comics et les séries.
+Démonstration en direct disponible sur : https://test-idzgl.vercel.app/
 
-First, run the development server:
+## Description
+
+Cette application utilise un endpoint API entièrement documenté à partir duquel elle récupère des données sur les héros et les vilains populaires de Marvel Comics, ainsi que sur les comics et les spectacles qui leur sont associés. Elle peut être étendue pour obtenir plus de données comme les événements et les histoires de l'univers Marvel Comics.
+
+## Installation
+
+1. Pour obtenir les fichiers de ce projet localement sur votre machine, vous pouvez cloner ce dépôt en exécutant la commande suivante sur votre terminal ou ligne de commande :
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/daviani/test-idzgl
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Ensuite, vous devez configurer le fichier `.env` qui se trouve à la racine avec les clés API et les informations d'identification appropriées du fournisseur de services suivant:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [Marvel Comics API Gateway](https://developer.marvel.com)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Installez tous les paquets de dépendance trouvés dans le fichier `package.json` en exécutant `yarn install` ou `npm install` depuis le répertoire racine du projet.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Pour démarrer le serveur de développement de l'application, exécutez `npm run dev` ou `yarn dev`. Cela devrait enregistrer quelques informations sur l'application de démarrage et afficher l'url du serveur de développement : `http://localhost:3000`. Visitez http://localhost:3000 pour voir votre application.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vous pourriez éventuellement vouloir déployer une version personnalisée de votre application dans une instance future. [La plate-forme Vercel](https://vercel.com/) est conçue pour le déploiement d'applications NextJS et plus encore, car elle dispose d'un environnement intégré permettant de déployer directement à partir de votre propre [dépôt Github](https://github.com/new).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Support
 
-## Deploy on Vercel
+Si un souci, un bug ou un problème survient à l'avenir, vous pouvez créer un problème, contribuer ou me contacter via :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [contact@daviani.dev](mailto:contact@daviani.dev)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+###
+
+![GitHub last commit](https://img.shields.io/github/last-commit/daviani/test-idzgl) ![GitHub contributors](https://img.shields.io/github/contributors/daviani/test-idzgl) ![GitHub issues](https://img.shields.io/github/issues/cvrlnolan/pocketmarvel) ![GitHub repo size](https://img.shields.io/github/repo-size/daviani/test-idzgl)
+
+

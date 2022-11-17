@@ -29,19 +29,25 @@ const Card = ({ name, comics, describe, img }) => {
                 : <div > Pas de description </div >
               }
             </div >
-            <div className="mt-3 space-x-4 flex text-gray-800 dark:text-gray-100 p-1" >
+            <div
+              className="mt-3 space-x-4 flex text-gray-800 dark:text-gray-100 p-1" >
               <div
                 className="px-6 pt-4 pb-2" >
-                <div className='font-bold text-gray-800 dark:text-gray-100' >
-                  {numberOfComics.length} premiers comics :
+                <div className="font-bold text-gray-800 dark:text-gray-100" >
+                  {numberOfComics.length}
+                  {numberOfComics.length === 1
+                    ? <>{'premier comics : '}</>
+                    : <>{'premiers comics :'}</>
+                  }
                 </div >
 
                 {numberOfComics.map((item) => {
                   return (
-                    <span key={item.id}
-                          className="inline-block text-sm mr-2 mb-2" >
-                {'-> '} {item.name} <br />
-                </span >
+                    <div key={item.id}
+                         className="inline-block text-sm mr-2 mb-2" >
+                      {'-> '}
+                      {item.name}
+                    </div >
                   )
                 })}
               </div >

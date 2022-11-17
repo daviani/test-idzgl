@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { getAllcharacters, getLoadMoreCharacters } from '../../lib/request'
 import CardHeroes from '../../components/CardHeroes'
 import { useState } from 'react'
-import { Router } from 'next/router'
+import { Router, useRouter } from 'next/router'
 import Loader from '../../components/Loader'
 import { ImSpinner9 } from 'react-icons/im'
 import Button from '../../components/Button'
+import i18n from '../../lib/i18n'
 
 export async function getStaticProps () {
   try {
@@ -21,6 +22,7 @@ export async function getStaticProps () {
 }
 
 export default function Characters ({ characters }) {
+  const { locale } = useRouter()
   const [offset, setOffset] = useState(20)
   const [loading, setLoading] = useState(false)
   const [buttonLoading, setButtonLoading] = useState(false)
@@ -94,12 +96,12 @@ export default function Characters ({ characters }) {
               <Button >
                 <ImSpinner9
                   className="w-5 h-5 mr-3 -ml-1 animate-spin text-main-50 dark:text-main-700 " />
-                Loading...
+                {i18n.charactersPage.loadingButton[locale]}
               </Button >
               :
               <div  onClick={loadMore}>
                 <Button >
-                Show More
+                  {i18n.charactersPage.showButton[locale]}
                 </Button >
               </div>
 
@@ -108,7 +110,7 @@ export default function Characters ({ characters }) {
             <button type="button"
                     className=" m-5 px-4 py-2 text-sm font-semibold leading-6 text-main-50 dark:text-main-50 bg-main-700 dark:bg-main-800 rounded-md"
             >
-              Back To Home
+              {i18n.charactersPage.backButton[locale]}
             </button >
           </Link >
         </div >

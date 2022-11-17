@@ -43,7 +43,7 @@ const Footer = () => {
                       className="inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start"
                     >
                         <a
-                          href={'https://github.com/daviani/test-sximzjp'}
+                          href={'https://github.com/daviani/test-idzgl'}
                           className="text-main-700 dark:text-main-200 hover:font-bold mx-1"
                         >
                         GitHub
